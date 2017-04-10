@@ -1,8 +1,8 @@
-[![Travis CI](https://api.travis-ci.org/mix-it/mixit.svg?branch=master)](https://travis-ci.org/mix-it/mixit)
+[![Travis CI](https://api.travis-ci.org/gaconkzk/reactive-thethree.svg?branch=master)](https://travis-ci.org/gaconkzk/reactive-thethree)
 
-# MiXiT website
+# The Flies Reactive website
 
-This project purpose is to power the MiXiT website.
+This project purpose is to demonstrate the Flies group's activities.
 
 ## Software design
 
@@ -16,7 +16,7 @@ developed with Spring Framework 5 and Kotlin can look like:
  - Immutable Pojos
  - Cloud Native
  
- You can see a variant of this project software design in [this functional-bean-registration branch](https://github.com/mix-it/mixit/tree/functional-bean-registration):
+ You can see a variant of this project software design in [mixit functional-bean-registration branch](https://github.com/mix-it/mixit/tree/functional-bean-registration):
   - [Functional bean registration](https://github.com/mix-it/mixit/blob/functional-bean-registration/src/main/kotlin/Context.kt)
   - Pure Spring Framework project (without Spring Boot)
   - No CGLIB proxy
@@ -77,3 +77,6 @@ java -jar build/libs/mixit-1.0.0-SNAPSHOT.jar
 ./gradlew clean bootJar
 cf push
 ```
+
+Thanks MiXiT Team for a great project - It have all technologies that I've wanted to learn and practice on.
+gaconkzk
