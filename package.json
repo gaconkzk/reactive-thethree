@@ -1,9 +1,9 @@
 {
-  "name": "mixit",
+  "name": "theflies",
   "version": "1.0.0",
-  "description": "Site used to manage Mixit conference (Lyon - France)",
+  "description": "Site used to manage The Flies activities",
   "main": "index.js",
-  "repository": "https://github.com/mix-it/mixit.git",
+  "repository": "https://github.com/gaconkzk/reactive-thethree.git",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.0.15",
