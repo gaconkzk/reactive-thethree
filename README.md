@@ -1,4 +1,4 @@
-[![Travis CI](https://api.travis-ci.org/gaconkzk/reactive-thethree.svg?branch=master)](https://travis-ci.org/gaconkzk/reactive-thethree)
+[![Travis CI](https://travis-ci.org/gaconkzk/reactive-thethree.svg?branch=master)](https://travis-ci.org/gaconkzk/reactive-thethree)
 
 # The Flies Reactive website
 
