@@ -45,7 +45,7 @@
     "company": "",
     "description": {
       "ENGLISH": "Agile explorer & trainer",
-      "FRENCH": "Agile explorer & trainer"
+      "VIETNAMESE": "Agile explorer & trainer"
     },
     "firstname": "Philippe",
     "lastname": "Launay",
@@ -59,7 +59,7 @@
     "company": "",
     "description": {
       "ENGLISH": "Artisan du logiciel / Coach agile",
-      "FRENCH": "Artisan du logiciel / Coach agile"
+      "VIETNAMESE": "Artisan du logiciel / Coach agile"
     },
     "firstname": "Antoine",
     "lastname": "Vernois",
@@ -73,7 +73,7 @@
     "company": "",
     "description": {
       "ENGLISH": "Jean-Claude est coach Agile, praticien Agile UX et formateur chez Valtech. Il est aussi l'auteur de deux blogs dont www.qualitystreet.fr .",
-      "FRENCH": "Jean-Claude est coach Agile, praticien Agile UX et formateur chez Valtech. Il est aussi l'auteur de deux blogs dont www.qualitystreet.fr ."
+      "VIETNAMESE": "Jean-Claude est coach Agile, praticien Agile UX et formateur chez Valtech. Il est aussi l'auteur de deux blogs dont www.qualitystreet.fr ."
     },
     "firstname": "Jean Claude",
     "lastname": "Grosjean",
@@ -87,7 +87,7 @@
     "company": "",
     "description": {
       "ENGLISH": "craint l'eau froide. ",
-      "FRENCH": "craint l'eau froide. "
+      "VIETNAMESE": "craint l'eau froide. "
     },
     "firstname": "Pablo",
     "lastname": "Pernot",
@@ -101,7 +101,7 @@
     "company": "",
     "description": {
       "ENGLISH": "Tomb\u00e9 dans l'open source: hibernate, hibernate search, hibernate validator, hibernate ogm. Tomb\u00e9 dans la communaut\u00e9: Les Cast Codeurs, etc",
-      "FRENCH": "Tomb\u00e9 dans l'open source: hibernate, hibernate search, hibernate validator, hibernate ogm. Tomb\u00e9 dans la communaut\u00e9: Les Cast Codeurs, etc"
+      "VIETNAMESE": "Tomb\u00e9 dans l'open source: hibernate, hibernate search, hibernate validator, hibernate ogm. Tomb\u00e9 dans la communaut\u00e9: Les Cast Codeurs, etc"
     },
     "firstname": "Emmanuel",
     "lastname": "Bernard",
@@ -115,7 +115,7 @@
     "company": "",
     "description": {
       "ENGLISH": "I'm the CEO of iMatix Corporation. We specialize in high performance messaging, in software architecture, and in social architecture.",
-      "FRENCH": "I'm the CEO of iMatix Corporation. We specialize in high performance messaging, in software architecture, and in social architecture."
+      "VIETNAMESE": "I'm the CEO of iMatix Corporation. We specialize in high performance messaging, in software architecture, and in social architecture."
     },
     "firstname": "Pieter",
     "lastname": "Hintjens",
@@ -129,7 +129,7 @@
     "company": "The Flies",
     "description": {
       "ENGLISH": "I'm the CEO of The Flies.",
-      "FRENCH": "Trùm Ruồi."
+      "VIETNAMESE": "Trùm Ruồi."
     },
     "firstname": "To",
     "lastname": "Vincent",
