@@ -15,12 +15,6 @@ developed with Spring Framework 5 and Kotlin can look like:
  - [Constructor based injection](http://olivergierke.de/2013/11/why-field-injection-is-evil/)
  - Immutable Pojos
  - Cloud Native
- 
- You can see a variant of this project software design in [mixit functional-bean-registration branch](https://github.com/mix-it/mixit/tree/functional-bean-registration):
-  - [Functional bean registration](https://github.com/mix-it/mixit/blob/functional-bean-registration/src/main/kotlin/Context.kt)
-  - Pure Spring Framework project (without Spring Boot)
-  - No CGLIB proxy
-  - No kotlin-spring plugin needed
 
 ### Technologies used
 
@@ -52,7 +46,7 @@ developed with Spring Framework 5 and Kotlin can look like:
 ### Run the app in dev mod using command line
  - Run `./gradlew bootRun -Pembed-mongo` in another terminal
  - Run `gulp watch` in another terminal
- - Open `http://localhost:8080/` in your browser
+ - Open `http://localhost:8009/` in your browser
  - If you want to debug the app, add `--debug-jvm` parameter to Gradle command line
  
 Sass, TypeScript, `messages*.properties` and templates should be live reloaded.
@@ -69,7 +63,7 @@ Sass, TypeScript, `messages*.properties` and templates should be live reloaded.
 ### Package and run the application from the executable JAR:
 ```
 ./gradlew clean bootJar
-java -jar build/libs/mixit-1.0.0-SNAPSHOT.jar
+java -jar build/libs/theflies-1.0.0.jar
 ```
 
 ###  Deploy the app on Cloud Foundry

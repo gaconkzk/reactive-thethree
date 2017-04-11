@@ -10,8 +10,6 @@ import org.springframework.web.reactive.function.server.router
 @Configuration
 class RedirectRoutes(val properties: TheFliesProperties) {
 
-    val GOOGLE_DRIVE_URI = "https://drive.google.com/open"
-
     @Bean
     fun redirectRouter() = router {
         accept(TEXT_HTML).nest {

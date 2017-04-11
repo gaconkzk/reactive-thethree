@@ -32,17 +32,8 @@ class UserRepository(val template: ReactiveMongoTemplate) {
 
     fun count() = template.count<User>()
 
-    fun findByYear(year: Int) =
-            template.find<User>(Query(where("year").`is`(year)))
-
-
     fun findByRole(role: Role) =
             template.find<User>(Query(where("role").`is`(role)))
-
-
-    fun findByRoleAndEvent(role: Role, event: String) =
-            template.find<User>(Query(where("role").`is`(role).and("events").`in`(event)))
-
 
     fun findOneByRole(login: String, role: Role) =
         template.findOne<User>(Query(where("role").`in`(role).and("_id").`is`(login)))
