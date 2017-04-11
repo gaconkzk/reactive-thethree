@@ -5,11 +5,11 @@ import org.gaconkzk.reactive.thethree.model.Language
 import org.springframework.boot.SpringApplication
 import org.springframework.data.mongodb.core.ReactiveMongoOperations
 import org.springframework.data.mongodb.core.query.Query
-import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
-import org.springframework.web.reactive.function.server.ServerResponse.*
+import org.springframework.web.reactive.function.server.ServerResponse.permanentRedirect
+import org.springframework.web.reactive.function.server.ServerResponse.seeOther
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import java.net.URI
@@ -70,10 +70,10 @@ fun LocalDateTime.formatDate(language: Language): String =
         if (language == Language.ENGLISH) this.format(englishDateFormatter) else this.format(frenchDateFormatter)
 
 fun LocalDateTime.formatTalkDate(language: Language): String =
-        if (language == Language.ENGLISH) this.format(englishTalkDateFormatter) else this.format(frenchTalkDateFormatter).capitalize()
+        if (language == Language.ENGLISH) this.format(englishTalkDateFormatter) else this.format(vietnameseTalkDateFormatter).capitalize()
 
 fun LocalDateTime.formatTalkTime(language: Language): String =
-        if (language == Language.ENGLISH) this.format(englishTalkTimeFormatter) else this.format(frenchTalkTimeFormatter)
+        if (language == Language.ENGLISH) this.format(englishTalkTimeFormatter) else this.format(vietnameseTalkTimeFormatter)
 
 private val daysLookup: Map<Long, String> =
         IntStream.rangeClosed(1, 31).boxed().collect(Collectors.toMap(Int::toLong, ::getOrdinal))
@@ -88,9 +88,9 @@ private val englishDateFormatter = DateTimeFormatterBuilder()
         .appendPattern("yyyy")
         .toFormatter(Locale.ENGLISH)
 
-private val frenchTalkDateFormatter = DateTimeFormatter.ofPattern("EEEE d MMMM", Locale.FRENCH)
+private val vietnameseTalkDateFormatter = DateTimeFormatter.ofPattern("EEEE d MMMM", Locale("vi", "VN"))
 
-private val frenchTalkTimeFormatter = DateTimeFormatter.ofPattern("HH'h'mm", Locale.FRENCH)
+private val vietnameseTalkTimeFormatter = DateTimeFormatter.ofPattern("HH'h'mm", Locale("vi", "VN"))
 
 private val englishTalkDateFormatter = DateTimeFormatterBuilder()
         .appendPattern("EEEE")

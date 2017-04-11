@@ -1,8 +1,10 @@
 package org.gaconkzk.reactive.thethree.model
 
-
+/**
+ *
+ */
 enum class Language {
-    FRENCH,
+    VIETNAMESE,
     ENGLISH;
 
     fun toLanguageTag() {

@@ -1,36 +1,18 @@
 package mixit.web
 
-import org.gaconkzk.reactive.thethree.web.handler.TalkHandler
 import org.gaconkzk.reactive.thethree.web.handler.UserHandler
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import org.springframework.http.MediaType.*
+import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.web.reactive.function.server.router
 
 
 @Configuration
-class ApiRoutes(val blogHandler: BlogHandler,
-                val eventHandler: EventHandler,
-                val talkHandler: TalkHandler,
-                val userHandler: UserHandler) {
+class ApiRoutes(val userHandler: UserHandler) {
 
     @Bean
     fun apiRouter() = router {
         (accept(APPLICATION_JSON) and "/api").nest {
-            "/blog".nest {
-                GET("/", blogHandler::findAll)
-                GET("/{id}", blogHandler::findOne)
-            }
-
-            "/event".nest {
-                GET("/", eventHandler::findAll)
-                GET("/{id}", eventHandler::findOne)
-            }
-
-            // Talks
-            GET("/talk/{login}", talkHandler::findOne)
-            GET("/{year}/talk", talkHandler::findByEventId)
-
             // users
             "/user".nest {
                 GET("/", userHandler::findAll)

@@ -1,29 +1,29 @@
 {
   "version": "1.0.0",
-  "name": "MiXiT",
+  "name": "TheFlies",
   "launch_path": "/",
   "start_url": "/"
   "icons": {
     "128": "/images/png/mxt-favicon_default.png"
   },
   "developer": {
-    "name": "Guillaume EHRET",
-    "url": "https://wwww.dev-mind.fr"
+    "name": "gaconkzk",
+    "url": "https://github.com/gaconkzk"
   },
   "installs_allowed_from": [
     "*"
   ],
-  "default_locale": "fr",
+  "default_locale": "en",
   "permissions": {
   },
   "locales": {
-    "fr": {
-      "name": "MiXiT",
-      "description": "MiXiT, c'est 2 jours de conférences et d'atelier pour découvrir de nouvelles idées, développer, pratiquer, réseauter..."
-    },
     "en": {
-       "name": "MiXiT",
-       "description": "MiXiT, it's 2 intense days of conferences to discover new ideas, games to learn, development or creative workshops"
+      "name": "TheFlies",
+      "description": "Fly high, fly low, trying to reach the sky and touching universe..."
+    },
+    "vn": {
+       "name": "TheFlies",
+       "description": "Hội đồng nghiên cứu khoa học Ruồi"
     }
   }
 }

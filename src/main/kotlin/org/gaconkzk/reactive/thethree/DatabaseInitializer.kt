@@ -1,21 +1,14 @@
 package org.gaconkzk.reactive.thethree
 
-import org.gaconkzk.reactive.thethree.repository.EventRepository
-import org.gaconkzk.reactive.thethree.repository.PostRepository
-import org.gaconkzk.reactive.thethree.repository.TalkRepository
 import org.gaconkzk.reactive.thethree.repository.UserRepository
+import org.springframework.stereotype.Component
+import javax.annotation.PostConstruct
 
-@org.springframework.stereotype.Component
-class DatabaseInitializer(val userRepository: UserRepository,
-                          val eventRepository: EventRepository,
-                          val talkRepository: TalkRepository,
-                          val postRepository: PostRepository) {
+@Component
+class DatabaseInitializer(val userRepository: UserRepository) {
 
-    @javax.annotation.PostConstruct
+    @PostConstruct
     fun init() {
         userRepository.initData()
-        eventRepository.initData()
-        talkRepository.initData()
-        postRepository.initData()
     }
 }

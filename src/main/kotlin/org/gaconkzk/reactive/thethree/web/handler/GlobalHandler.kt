@@ -1,9 +1,9 @@
 package org.gaconkzk.reactive.thethree.web.handler
 
-import mixit.model.*
-import mixit.repository.UserRepository
-import mixit.util.MarkdownConverter
-import mixit.util.language
+import org.gaconkzk.reactive.thethree.model.Role
+import org.gaconkzk.reactive.thethree.repository.UserRepository
+import org.gaconkzk.reactive.thethree.util.MarkdownConverter
+import org.gaconkzk.reactive.thethree.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
@@ -25,5 +25,7 @@ class GlobalHandler(val userRepository: UserRepository,
     fun faqView(req: ServerRequest) = ok().render("faq")
 
     fun comeToMixitView(req: ServerRequest) = ok().render("come")
+
+    fun homeView(req: ServerRequest) = ok().render("home")
 }
 
