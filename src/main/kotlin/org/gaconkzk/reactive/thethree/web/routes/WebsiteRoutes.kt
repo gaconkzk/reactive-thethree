@@ -32,9 +32,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
         accept(TEXT_HTML).nest {
             GET("/", globalHandler::homeView)
             GET("/about", globalHandler::findAboutView)
-            GET("/mixteen", globalHandler::mixteenView)
             GET("/faq", globalHandler::faqView)
-            GET("/come", globalHandler::comeToMixitView)
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
@@ -61,7 +59,15 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
         val session = request.session().block()
         val path = request.uri().path
         val model = generateModel(properties.baseUri!!, path, locale, session, messageSource)
-                next.handle(request).then { response -> if (response is RenderingResponse) RenderingResponse.from(response).modelAttributes(model).build() else response.toMono() }
+        next.handle(request).then {
+            response ->
+            if (response is RenderingResponse)
+                RenderingResponse
+                        .from(response)
+                        .modelAttributes(model)
+                        .build()
+            else response.toMono()
+        }
     }
 
     @Bean

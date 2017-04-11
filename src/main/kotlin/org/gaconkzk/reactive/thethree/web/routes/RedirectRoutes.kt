@@ -17,11 +17,8 @@ class RedirectRoutes(val properties: TheFliesProperties) {
                     or GET("/profile/{login}")
                     or GET("/member/sponsor/{login}")
                     or GET("/member/member/{login}")) { permanentRedirect("${properties.baseUri}/user/${it.pathVariable("login")}") }
-            GET("/sponsors/") { permanentRedirect("$${properties.baseUri}/sponsors") }
-
             GET("/about/") { permanentRedirect("${properties.baseUri}/about") }
             GET("/home") { permanentRedirect("${properties.baseUri}/") }
-
         }
     }
 
