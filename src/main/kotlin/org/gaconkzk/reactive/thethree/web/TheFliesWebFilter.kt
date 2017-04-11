@@ -12,12 +12,12 @@ import java.net.URI
 import java.util.*
 
 
-class MixitWebFilter(val properties: TheFliesProperties) : WebFilter {
+class TheFliesWebFilter(val properties: TheFliesProperties) : WebFilter {
 
     private val redirectDoneAttribute = "redirectDone"
 
     override fun filter(exchange: ServerWebExchange, chain: WebFilterChain) =
-            if (exchange.request.headers.host?.hostString?.endsWith("mix-it.vn") ?: false) {
+            if (exchange.request.headers.host?.hostString?.endsWith("theflies.xyz") ?: false) {
            val response = exchange.response
            response.statusCode = HttpStatus.PERMANENT_REDIRECT
            response.headers.location = URI("${properties.baseUri}${exchange.request.uri.path}")

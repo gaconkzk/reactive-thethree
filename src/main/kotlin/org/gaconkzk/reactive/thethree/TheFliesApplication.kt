@@ -3,7 +3,7 @@ package org.gaconkzk.reactive.thethree
 import com.samskivert.mustache.Mustache
 import org.gaconkzk.reactive.thethree.util.MarkdownConverter
 import org.gaconkzk.reactive.thethree.util.run
-import org.gaconkzk.reactive.thethree.web.MixitWebFilter
+import org.gaconkzk.reactive.thethree.web.TheFliesWebFilter
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.MessageSource
@@ -26,7 +26,7 @@ class TheFliesApplication {
     }
 
     @Bean
-    fun filter(properties: TheFliesProperties) = MixitWebFilter(properties)
+    fun filter(properties: TheFliesProperties) = TheFliesWebFilter(properties)
 
     @Bean
     fun markdownConverter() = MarkdownConverter()
