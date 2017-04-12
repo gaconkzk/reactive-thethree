@@ -33,14 +33,16 @@ class AdminHandler(val userRepository: UserRepository,
 
     fun createUser(req: ServerRequest): Mono<ServerResponse> = this.adminUser()
 
-    fun editUser(req: ServerRequest): Mono<ServerResponse> = userRepository.findOne(req.pathVariable("login")).then(this::adminUser)
+    fun editUser(req: ServerRequest): Mono<ServerResponse> =
+            userRepository.findOne(req.pathVariable("login"))
+                    .flatMap(this::adminUser)
 
     fun adminDeleteUser(req: ServerRequest): Mono<ServerResponse> =
-            req.body(BodyExtractors.toFormData()).then { data ->
-                val formData = data.toSingleValueMap()
+            req.body(BodyExtractors.toFormData()).flatMap {
+                val formData = it.toSingleValueMap()
                 userRepository
                         .deleteOne(formData["login"]!!)
-                        .then{ _ -> seeOther("${properties.baseUri}/admin/users") }
+                        .then { seeOther("${properties.baseUri}/admin/users") }
             }
 
     private fun adminUser(user: User = User("", "", "", "")) = ok().render("admin-user", mapOf(
@@ -56,8 +58,8 @@ class AdminHandler(val userRepository: UserRepository,
     ))
 
     fun adminSaveUser(req: ServerRequest) : Mono<ServerResponse> {
-        return req.body(BodyExtractors.toFormData()).then { data ->
-            val formData = data.toSingleValueMap()
+        return req.body(BodyExtractors.toFormData()).flatMap {
+            val formData = it.toSingleValueMap()
             val user = User(
                     login = formData["login"]!!,
                     firstname = formData["firstname"]!!,
@@ -71,7 +73,7 @@ class AdminHandler(val userRepository: UserRepository,
                     links =  formData["links"]!!.toLinks(),
                     legacyId = if (formData["legacyId"] == "") null else formData["legacyId"]!!.toLong()
             )
-            userRepository.save(user).then { _ -> seeOther("${properties.baseUri}/admin/users") }
+            userRepository.save(user).then { seeOther("${properties.baseUri}/admin/users") }
         }
     }
 

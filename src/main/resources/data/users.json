@@ -117,13 +117,13 @@
       "ENGLISH": "I'm the CEO of iMatix Corporation. We specialize in high performance messaging, in software architecture, and in social architecture.",
       "VIETNAMESE": "I'm the CEO of iMatix Corporation. We specialize in high performance messaging, in software architecture, and in social architecture."
     },
-    "firstname": "Pieter",
-    "lastname": "Hintjens",
+    "firstname": "The",
+    "lastname": "Flies",
     "legacyId": 31,
     "links": [],
-    "login": "hintjens",
+    "login": "theflies",
     "emailHash": "c1df3a0f97a9daac66cb6f35adb03368",
-    "role": "USER"
+    "role": "STAFF"
   },
   {
     "company": "The Flies",
